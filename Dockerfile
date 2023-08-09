@@ -1,6 +1,6 @@
 # Pull base image 
-From ubuntu:latest
-
+#From ubuntu:latest
+FROM python:alpine3.18
 # Maintainer 
 #MAINTAINER "valaxytech@gmail.com" 
 #COPY ./webapp.war /usr/local/tomcat/webapps
