@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-    name: python_image
+   name: python_image
 spec:
    template:
           spec:
@@ -10,6 +10,6 @@ spec:
                   image: amazon/aws-cli
                   command: ["sh","-c"]
                   args:
-                   - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 375869942651.dkr.ecr.us-east-1.amazonaws.com && docker pull 375869942651.dkr.ecr.us-east-1.amazonaws.com/mlops/test-python:v1 && docker run -d 375869942651.dkr.ecr.us-east-1.amazonaws.com/mlops/test-python:v1
+                   - docker pull 375869942651.dkr.ecr.us-east-1.amazonaws.com/mlops/test-python:v1 && docker run -d 375869942651.dkr.ecr.us-east-1.amazonaws.com/mlops/test-python:v1
              restartPolicy: Never
    backoffLimit: 0
